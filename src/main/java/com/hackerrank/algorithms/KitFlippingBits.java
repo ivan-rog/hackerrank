@@ -10,7 +10,7 @@ public class KitFlippingBits {
             short q = Short.parseShort(br.readLine().trim());
             for (short i = 0; i < q; i++) {
                 int n = Integer.parseInt(br.readLine().trim());
-                long flipped = ~n;
+                long flipped = ~n & 0xFFFFFFFFL;
                 bw.write(String.valueOf(flipped));
                 bw.newLine();
             }
